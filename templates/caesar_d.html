@@ -1,0 +1,77 @@
+{% include 'header.html' %}
+
+
+<div class="content-wrapper">
+  <!-- Content Header (Page header) -->
+  <section class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-2">
+        <div class="col-sm-6">
+          <h1>Caesar Cipher</h1>
+        </div>
+        <div class="col-sm-6">
+          <ol class="breadcrumb float-sm-right">
+            <li class="breadcrumb-item"><a href="/caesar_e">Enkripsi</a></li>
+            <li class="breadcrumb-item active"><a href="/caesar_d">Dekripsi</a></li>
+          </ol>
+        </div>
+      </div>
+    </div><!-- /.container-fluid -->
+  </section>
+
+
+  <!-- Main content -->
+  <section class="content">
+    <div class="container-fluid">
+      <div class="row">
+        <!-- left column -->
+        <div class="col-md-6">
+
+          <!-- general form elements -->
+          <div class="card card-primary">
+            <div class="card-header">
+              <h3 class="card-title">Dekripsi</h3>
+            </div>
+            <!-- /.card-header -->
+            <!-- form start -->
+            <form method="POST" action="/caesar_d">
+              <div class="card-body">
+                <div class="form-group">
+                  <label>Cipher Text</label>
+                  <input type="text" class="form-control" name="cipher" placeholder="plain">
+                </div>
+                <div class="form-group">
+                  <label>Key</label>
+                  <input type="number" class="form-control" name="key" placeholder="key">
+                </div>
+
+                <div class="card-footer">
+                  <button type="submit" class="btn btn-primary">Dekripsi</button>
+
+                </div>
+                <div class="row mb-2">
+                  <h1 class="col-sm-6"">{{ Dekripsi }}</h1>
+                </div>  
+              </div>
+              <!-- /.card-body -->
+            </form>
+            
+          </div>
+          
+        </div>
+        <!--/.col (right) -->
+      </div>
+    </section>
+<!-- /.row -->
+</div><!-- /.container-fluid -->
+
+<!-- Main content -->
+<section class=" content">
+                    <div class="container-fluid">
+                    </div><!-- /.container-fluid -->
+  </section>
+  <!-- /.content -->
+</div>
+<!-- /.content-wrapper -->
+
+{% include 'footer.html' %}
